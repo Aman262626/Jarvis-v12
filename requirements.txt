@@ -2,9 +2,11 @@ streamlit
 groq
 anthropic
 google-generativeai
-requests
-gTTS
-psutil
-pillow
-streamlit-mic-recorder
+opencv-python-headless
+mediapipe
 numpy
+SpeechRecognition
+Pillow
+gTTS
+requests
+psutil
