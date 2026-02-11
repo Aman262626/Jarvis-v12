@@ -6,7 +6,5 @@ requests
 gTTS
 psutil
 pillow
-mediapipe
-opencv-python-headless
+streamlit-mic-recorder
 numpy
-SpeechRecognition
