@@ -9,12 +9,13 @@ from google.generativeai.types import HarmCategory, HarmBlockThreshold
 from streamlit_mic_recorder import mic_recorder, speech_to_text # For Cloud Voice
 
 # ==========================================
-# 1. API CONFIG (Using Streamlit Secrets)
+# 1. API CONFIG (Using Environment Variables for Render)
 # ==========================================
-# Render par "Environment Variables" mein ye keys zaroor daalein
-GROQ_KEY = st.secrets.get("GROQ_KEY", "YOUR_GROQ_KEY")
-CLAUDE_KEY = st.secrets.get("CLAUDE_KEY", "YOUR_CLAUDE_KEY")
-GEMINI_KEY = st.secrets.get("GEMINI_KEY", "YOUR_GEMINI_KEY")
+# Render par "Environment Variables" mein ye keys zaroor daalein:
+# GROQ_KEY, CLAUDE_KEY, GEMINI_KEY
+GROQ_KEY = os.environ.get("GROQ_KEY", "YOUR_GROQ_KEY")
+CLAUDE_KEY = os.environ.get("CLAUDE_KEY", "YOUR_CLAUDE_KEY")
+GEMINI_KEY = os.environ.get("GEMINI_KEY", "YOUR_GEMINI_KEY")
 
 try:
     groq_client = Groq(api_key=GROQ_KEY)
